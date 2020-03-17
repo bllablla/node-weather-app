@@ -8,6 +8,9 @@ const hbs = require('hbs')
 // - express() fn is top level fn
 const app = express() //  storing express() in variable for later use
 
+const port = process.env.PORT || 3000 // setting port for Heroku OR for local
+
+
 // # Define paths for Express config
 // - express by default expects view files to be in VIEWS folder 
 const publicDirPath = path.join(__dirname, '../public') // storing joined path for PUBLIC folder in variable
@@ -142,6 +145,6 @@ app.get('*', (req, res) => {
 // starts server
 // starts on port:3000
 // calback fn - do something while server running (optional)
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })

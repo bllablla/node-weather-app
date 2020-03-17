@@ -25,7 +25,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     messageOne.textContent = 'Loading...' // setting default message until it render real data
 
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error)
@@ -36,7 +36,4 @@ weatherForm.addEventListener('submit', (e) => {
         })
     })
 
-    
-
-    
 })
