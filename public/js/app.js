@@ -1,5 +1,3 @@
-console.log('JavaScript is included')
-
 // # Fetch is client side function (not nodejs)
 // First arg - url for fetching
 // Second arg (must be in .then() fn)- callback fn because fetch is async fn (we are waiting response/data)
