@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback(body.error, undefined)   // we use callback() because we can't use return
         }
         else {
-            callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degrees out, There is ' + body.currently.precipProbability + '% chance of rain.')
+            callback(undefined, body.daily.data[0].summary + ' Trenutna temperatura je ' + body.currently.temperature + ' stepeni Celzjusa, i postoji ' + body.currently.precipProbability + '% verovatnoce za kisu. Najniza dnevna temperatura je ' + body.daily.data[0].temperatureLow + ' stepeni Celzjusa, a najvisa dnevna ce biti ' + body.daily.data[0].temperatureHigh + ' stepeni celzjusa. Pritisak je ' + body.daily.data[0].pressure + ' milibara, a brzina vetra je ' + body.daily.data[0].windSpeed + ' metara u sekundi.')
         }
     })
     
